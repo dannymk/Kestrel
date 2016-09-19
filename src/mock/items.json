@@ -1,0 +1,19 @@
+[
+      {
+        "title": "React",
+        "sub": [
+          {
+            "title": "Redux"
+          },
+          {
+            "title": "Flex"
+          },
+          {
+            "title": "GraphQL"
+          }
+        ]
+      },
+      {
+        "title": "Angular"
+      }
+]

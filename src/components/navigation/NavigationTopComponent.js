@@ -15,23 +15,3 @@ export default class NavigationTopComponent extends Component {
     );
   }
 }
-
-NavigationTopComponent.defaultProps = {
-//  header: { name: 'Testing' },
-  items: [
-    {
-      title: 'Bear',
-      sub: [
-        {
-          title: 'Sub One'
-        },
-        {
-          title: 'Sub One two'
-        }
-      ]
-    },
-    {
-      title: 'Cow'
-    }
-  ]
-};
