@@ -4,6 +4,7 @@ require('styles/App.css');
 import React, {Component} from 'react';
 import axios from 'axios';
 import NavigationTopComponent from './navigation/NavigationTopComponent';
+import BlankPanel from './panels/BlankComponent';
 
 export default class AppComponent extends Component {
   
@@ -29,7 +30,10 @@ export default class AppComponent extends Component {
   
   render() {
     return (
+      <div>
         <NavigationTopComponent items={this.state.items} />
+        <BlankPanel title="First Panel" content="Basic content..." />
+      </div>
     );
   }
 }

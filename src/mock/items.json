@@ -3,13 +3,20 @@
         "title": "React",
         "sub": [
           {
-            "title": "Redux"
+            "title": "Redux",
+            "panel": {
+              "title" : "Redux App State",
+              "content" : "Redux maintains application state while react maintains component state."
+            }
           },
           {
             "title": "Flex"
           },
           {
             "title": "GraphQL"
+          },
+          {
+            "title": "C++"
           }
         ]
       },
