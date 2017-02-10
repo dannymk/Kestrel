@@ -1,24 +1,40 @@
 'use strict';
-import React from 'react';
+import React, {Component} from 'react';
 import {Panel} from 'react-bootstrap';
+import { connect } from 'react-redux';
+import { errors,amid } from '../../actions/index';
 
 require('styles/panels/Blank.css');
-let BlankComponent = (props) => {
-  let title = (
-      <h3>{props.title}</h3>
-  );
-
-  return (
-    <Panel header={title} className="blank-component">
-      {props.content}
-    </Panel>
-  )
+class BlankComponent extends Component{
+  componentDidMount(){
+    this.props.errors('Daniel');
+    this.props.amid();
+  }
+  
+  render(){
+    let title = (
+        <h3>{this.props.title}</h3>
+    );
+  
+    return (
+      <Panel header={title} className="blank-component">
+        {this.props.content}
+        
+        {this.props.display}
+        <br />
+        <br />
+        Carlos: {this.props.carlos}
+      </Panel>
+    )
+  }
+  
 }
 
-BlankComponent.displayName = 'PanelsBlankComponent';
+function mapStateToProps(state){
+  return {
+    display: state.errors,
+    carlos: state.greetings
+  };
+}
 
-// Uncomment properties you need
-// BlankComponent.propTypes = {};
-// BlankComponent.defaultProps = {};
-
-export default BlankComponent;
+export default connect(mapStateToProps, {errors,amid})(BlankComponent);
