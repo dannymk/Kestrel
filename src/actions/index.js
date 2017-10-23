@@ -4,12 +4,3 @@ export function errors(username){
     login: username
   };
 }
-
-export function amid(){
-  return {
-    type: 'message',
-    greeting: 'Welcome to CT open Source'
-  }
-
-}
-
