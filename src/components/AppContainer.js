@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import Main from './Main';
+import App from './App';
 
 class MainContainer extends Component {
 
@@ -24,7 +24,7 @@ class MainContainer extends Component {
    }   
 
    render() {
-      return <Main items={this.state.items} />;
+      return <App items={this.state.items} />;
    }
 }
 

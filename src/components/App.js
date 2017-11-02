@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import NavigationTop from './navigation/NavigationTop';
 import BlankPanel from './panels/Blank';
 
-const Main = ({items}) => {
+const App = ({items}) => {
    return (
       <div>
          <NavigationTop items={items} />
@@ -12,8 +12,8 @@ const Main = ({items}) => {
    );
 };
 
-Main.propTypes = {
+App.propTypes = {
    items: PropTypes.array
 };
 
-export default Main;
+export default App;

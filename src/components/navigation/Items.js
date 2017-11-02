@@ -10,7 +10,7 @@ const Items = ({config}) => {
    let index = 1;
    let navItems = config.map((item) => {
       if (!item.sub) {
-         return (<NavItem key={index++} href="#">{item.title}</NavItem>);
+         return <NavItem key={index++} href="#">{item.title}</NavItem>;
 
       } else {
          let subMenu = item.sub.map((subItem) => {
