@@ -2,8 +2,18 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import App from '../../components/App';
 
-const app = shallow(<App />);
+describe('App', () => {
+   const props = { items: [{ "title": "Angular" }] };
+   const app = shallow(<App {...props} />);
 
-test("App renderes correctly", () => {
-   expect(app).toMatchSnapshot();
+   test("App renders properly", () => {
+      expect(app).toMatchSnapshot();
+   });
+   
+   test("Add emty item array", () => {
+      console.log(app.debug());
+      //expect().toBe(true);
+      
+   });
+   
 });

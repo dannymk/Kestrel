@@ -1,0 +1,1 @@
+docker run --rm -it -v ${PWD}:/usr/src -p 9000:3000 node bash

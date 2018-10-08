@@ -1,31 +1,22 @@
-import React, {Component} from 'react';
-import axios from 'axios';
+import React, { Component } from 'react';
+import {connect} from 'react-redux';
 import App from './App';
 
-class MainContainer extends Component {
-
-   constructor(props) {
-      super(props);
-      this.state = {
-         items: []
-      };
-   }
-
-   componentWillMount() {
-      let self = this;
-      let source = process.env.REACT_APP_items;
-      axios.get(source)
-           .then(function (response) {
-               self.setState({ items: response.data });  
-           })
-           .catch(function (error) {
-               window.console.log(error);
-           });
-   }   
-
+// This is kind of a duplication just for testing purposes
+export class AppContainer extends Component {
    render() {
-      return <App items={this.state.items} />;
+      return <App {...this.props} />;
    }
-}
+};
 
-export default MainContainer;
+const mapStateToProps = (state) => {
+   return {
+        
+   }; 
+};
+
+const mapDispatchToProps = (dispatch, props) => {
+   
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

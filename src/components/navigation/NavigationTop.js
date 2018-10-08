@@ -1,20 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Navbar} from 'react-bootstrap';
-import Header from './Header';
-import Items from './Items';
+import {Menubar} from 'primereact/menubar';
 
-const NavigationTop = ({header = {}, items}) => {
+const NavigationTop = ({menus}) => {
    return (
-      <Navbar className="text-left">
-         <Header config={header} />
-         <Items config={items} />
-      </Navbar>
+      <Menubar model={menus}>
+      </Menubar>
    );
 };
 
 NavigationTop.propTypes = {
-   items: PropTypes.array,
+   menus: PropTypes.array,
    header: PropTypes.object
 };
 

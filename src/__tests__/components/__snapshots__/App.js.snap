@@ -1,10 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App renderes correctly 1`] = `
+exports[`App App renders properly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__unrendered__): <App
+    items={
+        Array [
+            Object {
+              "title": "Angular",
+            },
+          ]
+    }
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -19,7 +27,13 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <NavigationTop
-          items={undefined}
+          items={
+                    Array [
+                              Object {
+                                "title": "Angular",
+                              },
+                            ]
+          }
 />,
         <BlankComponent
           content="Basic content..."
@@ -34,7 +48,11 @@ ShallowWrapper {
         "key": null,
         "nodeType": "function",
         "props": Object {
-          "items": undefined,
+          "items": Array [
+            Object {
+              "title": "Angular",
+            },
+          ],
         },
         "ref": null,
         "rendered": null,
@@ -63,7 +81,13 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <NavigationTop
-            items={undefined}
+            items={
+                        Array [
+                                    Object {
+                                      "title": "Angular",
+                                    },
+                                  ]
+            }
 />,
           <BlankComponent
             content="Basic content..."
@@ -78,7 +102,11 @@ ShallowWrapper {
           "key": null,
           "nodeType": "function",
           "props": Object {
-            "items": undefined,
+            "items": Array [
+              Object {
+                "title": "Angular",
+              },
+            ],
           },
           "ref": null,
           "rendered": null,
