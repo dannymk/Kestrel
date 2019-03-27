@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import Main from './Main';
+import Finder from './Location';
 
 class MainContainer extends Component {
 
@@ -21,10 +22,15 @@ class MainContainer extends Component {
            .catch(function (error) {
                window.console.log(error);
            });
+      Finder();
    }   
 
    render() {
-      return <Main menus={this.state.menus} />;
+      return (
+         <div>
+            <Main menus={this.state.menus} />
+         </div>
+      );
    }
 }
 

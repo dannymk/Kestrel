@@ -7,7 +7,7 @@ const Main = ({menus}) => {
    return (
       <div>
          <NavigationTop menus={menus} />
-         <BlankPanel title="First Panel" content="Basic content..." />
+         <BlankPanel title="My new component with GeoLocation" />
       </div>
    );
 };
