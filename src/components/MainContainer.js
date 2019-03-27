@@ -1,36 +1,30 @@
 import React, {Component} from 'react';
-import axios from 'axios';
-import Main from './Main';
-import Finder from './Location';
+import BlankPanel from './panels/Blank';
+import Login from './LoginContainer';
+import NavigationTop from './navigation/NavigationTopContainer';
+import Location from './Location';
 
 class MainContainer extends Component {
 
    constructor(props) {
       super(props);
-      this.state = {
-         menus: []
-      };
+      this.state = { authenticated: false };
+      //Location();
    }
 
-   componentWillMount() {
-      let self = this;
-      let source = process.env.REACT_APP_navigation_top;
-      axios.get(source)
-           .then(function (response) {
-               self.setState({ menus: response.data });  
-           })
-           .catch(function (error) {
-               window.console.log(error);
-           });
-      Finder();
-   }   
-
-   render() {
-      return (
-         <div>
-            <Main menus={this.state.menus} />
-         </div>
-      );
+   render() {     
+      if (!this.state.authenticated){      
+         return <Login />;
+         
+      }else{
+         return (
+             <div>
+                <NavigationTop />
+                <BlankPanel title="My new component with GeoLocation" />
+             </div>              
+         );         
+ 
+      }
    }
 }
 
