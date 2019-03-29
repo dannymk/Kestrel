@@ -9,10 +9,10 @@ class NavigationTopContainer extends Component {
       super(props);
       this.state = {
          menus: []
-      };      
+      };
    }
    
-   componentWillMount() {
+   componentDidMount(){
       let self = this;
       let source = process.env.REACT_APP_navigation_top;
       axios.get(source)
@@ -21,10 +21,10 @@ class NavigationTopContainer extends Component {
            })
            .catch(function (error) {
                window.console.log(error);
-           });
+           });      
+         
+   }
 
-   }      
-   
    render() {
       return (
          <Menubar model={this.state.menus}>

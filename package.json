@@ -7,10 +7,13 @@
     "merge": "^1.2.1",
     "primeicons": "^1.0.0",
     "primereact": "^2.0.1",
-    "react": "^16.8.4",
+    "react": "^16.8.6",
     "react-bootstrap": "^0.31.3",
-    "react-dom": "^16.8.4",
-    "react-scripts": "^2.1.8"
+    "react-dom": "^16.8.6",
+    "react-redux": "^6.0.1",
+    "react-scripts": "^2.1.8",
+    "redux": "^4.0.1",
+    "redux-form": "^8.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
