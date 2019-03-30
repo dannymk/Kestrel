@@ -6,6 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
+import './styles/primeflex.css';
 // Our app starts here
 import MainContainer from './components/MainContainer';
 

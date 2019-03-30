@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Panel} from 'primereact/panel';
-import '../styles/primeflex.css';
+import './LoginContainer.css';
 
 class LoginContainer extends Component {
    
