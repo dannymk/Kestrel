@@ -14,7 +14,11 @@ class MainContainer extends Component {
 
    render() {     
       if (!this.state.authenticated){      
-         return <Login />;
+         return (
+            <div  style={{ paddingTop: '40px'}}>
+               <Login />
+            </div>
+         );
          
       }else{
          return (
