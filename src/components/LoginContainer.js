@@ -6,7 +6,22 @@ class LoginContainer extends Component {
    
    constructor(props){
       super(props);
-   }   
+      this.state = {
+         login: '',
+         password: ''
+      };
+   }
+   
+   onLogin = event => {
+      event.preventDefault();
+      this.props.onLogin(this.state);
+      
+   }
+   
+   onClear = event => {
+      event.preventDefault();
+      this.setState({login:'', password:''});
+   }
    
    render(){
       return (
@@ -17,11 +32,15 @@ class LoginContainer extends Component {
                    <form>
                      <div className="p-grid">
                         <div className="p-col-2"><label>Username:</label></div>
-                        <div className="p-col-10"><input type="text" style={{ width: "100%" }} /></div>
+                        <div className="p-col-10">
+                           <input value={this.state.login} type="text" onChange={e => this.setState({login: e.target.value})} style={{ width: "100%" }} />
+                        </div>
                         <div className="p-col-2"><label>Password:</label></div>
-                        <div className="p-col-10"><input type="password" style={{ width: "100%" }} /></div>  
-                        <div className="p-col-2"><button type="submit">Submit</button></div>
-                        <div className="p-col-10"><button type="button">Clear Values</button></div>    
+                        <div className="p-col-10">
+                           <input value={this.state.password} type="password" onChange={e => this.setState({password: e.target.value})} style={{ width: "100%" }} />
+                        </div>  
+                        <div className="p-col-2"><button type="submit" onClick={this.onLogin}>Submit</button></div>
+                        <div className="p-col-10"><button type="button" onClick={this.onClear}>Clear Values</button></div>    
                      </div>
                    </form>
                 </Panel>

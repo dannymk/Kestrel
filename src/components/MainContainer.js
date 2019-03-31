@@ -12,11 +12,16 @@ class MainContainer extends Component {
       //Location();
    }
 
+   loginAction = event => {
+      console.log(event);
+      
+   }
+   
    render() {     
       if (!this.state.authenticated){      
          return (
             <div  style={{ paddingTop: '40px'}}>
-               <Login />
+               <Login onLogin={this.loginAction} />
             </div>
          );
          
