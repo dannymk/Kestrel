@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import {Button} from 'primereact/button';
 import {Menubar} from 'primereact/menubar';
 import {InputText} from 'primereact/inputtext';
+import Login from '../LoginContainer';
 
 class NavigationTopContainer extends Component {
    constructor(props){
@@ -29,7 +29,7 @@ class NavigationTopContainer extends Component {
       return (
          <Menubar model={this.state.menus}>
              <InputText placeholder="Search" type="text" />
-             <Button label="Logout" icon="pi pi-power-off" className="p-button-danger" style={{marginLeft:4}} />
+             <Login authenticated={this.props.authenticated} />
          </Menubar>
       );
    }

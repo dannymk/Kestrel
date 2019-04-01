@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import BlankPanel from './panels/Blank';
 import Login from './LoginContainer';
 import NavigationTop from './navigation/NavigationTopContainer';
-import Location from './Location';
+import BreadCrumbs from './navigation/BreadCrumbs';
+//import Location from './Location';
 
 class MainContainer extends Component {
 
@@ -12,8 +13,13 @@ class MainContainer extends Component {
       //Location();
    }
 
-   loginAction = event => {
-      console.log(event);
+   loginAction = auth => {
+      if (auth.login === 'admin' && auth.password === '123qwe'){
+         this.setState({authenticated: true});
+      }else{
+         console.log('Invalid login and password.');
+         console.log(auth);
+      }
       
    }
    
@@ -28,8 +34,9 @@ class MainContainer extends Component {
       }else{
          return (
              <div>
-                <NavigationTop />
-                <BlankPanel title="My new component with GeoLocation" />
+                <NavigationTop authenticated={this.state.authenticated} />
+                <BreadCrumbs />
+                <BlankPanel />
              </div>              
          );         
  

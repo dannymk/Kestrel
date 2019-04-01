@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Panel} from 'primereact/panel';
+import {Button} from 'primereact/button';
 import './LoginContainer.css';
 
 class LoginContainer extends Component {
@@ -23,7 +24,14 @@ class LoginContainer extends Component {
       this.setState({login:'', password:''});
    }
    
+   renderLogout = () => {
+      return <Button label="Logout" icon="pi pi-power-off" className="p-button-danger" onClick={this.onClear} style={{marginLeft:4}} />;
+   }
+   
    render(){
+      if ( this.props.authenticated ){
+         return this.renderLogout();
+      }
       return (
          <div className="p-grid">
             <div className="p-col-4"></div>
