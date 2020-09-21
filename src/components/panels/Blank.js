@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Panel} from 'react-bootstrap';
+import {Panel} from 'primereact/panel';
 import {TabView,TabPanel} from 'primereact/tabview';
 import {DataTable} from 'primereact/datatable';
 import {Column} from 'primereact/column';
